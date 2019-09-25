@@ -27,3 +27,17 @@ print "Email: ".$email."<br>";
 print "vanus: ".$vanus."<br>";
 print "pikkus: ".$pikkus."<br>";
 print "kaal: ".$kaal."<br>";
+
+
+//muutujate dünaamiline defineerimine
+$kehamassiindeks = $kaal / ($pikkus * $pikkus);
+print "kehamassiindeks: ".$kehamassiindeks."<br>";
+
+
+
+
+
+
+
+
+
