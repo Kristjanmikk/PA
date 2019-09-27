@@ -1,5 +1,15 @@
+
+
+/*<form action="phpdo.php" method="get">
+    <div>
+        <label for="raadius">raadius:</label>
+        <input type="number" id="raadius" name="raadius">
+    </div>
+    <input type="submit" value="saada">
+</form>*/
+
 <?php
-$raadius = $_GET["raadius"];
+/*$raadius = $_GET["raadius"];
 
 $circumference = 2 * $raadius * M_PI;
 
@@ -13,4 +23,7 @@ print '<a href="php input.php"> sisesta andmed uuesti</a> <br>';
 //muutujate andme tüüpi ja väärtuste kontroll var_dump($area); näitab andme tüüpi ja väärtust
 $circumferenceÜmardatud = round($circumference, 3);
 
-print $circumferenceÜmardatud."<b>";
+print $circumferenceÜmardatud."<b>";*/
+
+
+// kasuta php.net funktsioonide jaoks
