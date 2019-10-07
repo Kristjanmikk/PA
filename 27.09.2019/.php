@@ -27,3 +27,10 @@ print $circumferenceÜmardatud."<b>";*/
 
 
 // kasuta php.net funktsioonide jaoks
+
+#päeva teemad
+##muutuja siseinfo kontroll var_dump($var) php.net(function.pi.php) also round($var, precision)
+
+27.09.2019
+
+//php sise funktsioonide kasutamine
