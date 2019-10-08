@@ -11,16 +11,26 @@
 
 <form action="sõjavägiDo.php" method="get">
     <div id="input-group">
-        <label for="number1">kodakonsus</label>
-        <input type="text" id="number1" name="number1">
+        <label for="nation">kodakontsus</label>
+        <select id="nation" name="nation">
+            <option value="et">eestlane</option>
+            <option value="ru">venelane</option>
+            <option value="fi">soomlane</option>
+            <option value="se">rootslane</option>
+            </select>
     </div>
     <div id="input-group">
-        <label for="number2">vanus?</label>
-        <input type="text" id="number2" name="number2">
+        <label for="vanus">vanus?</label>
+        <input type="text" id="vanus" name="vanus">
     </div>
     <div id="input-group">
-        <label for="number3">mitu klassi haridust?</label>
-        <input type="text" id="number3" name="number3">
+        <label for="haridus">mitu klassi haridust?</label>
+        <select id="haridus" name="haridus">
+             <option value="ph">põhiharidus</option>
+            <option value="ke">keskharidus</option>
+            <option value="kh">kõrgharidus</option>
+            <option value="N">madalam</option>
+        </select>
     </div>
     <input type="submit" value="saada">
 
