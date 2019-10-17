@@ -13,8 +13,14 @@ if(empty($vanus)){
 
 else if($rahvus == "et" and $vanus >= 18 and $haridus != "N"){
     print "kõlbate kaitseväkke";
-}else{
-    echo "ei kõlba";
+}else if($rahvus != "et"){
+    echo "kohustus on ainult eestlastel";
+    print '<a href="sõjavägiVorm.php"> proovi uuesti</a> <br>';
+}else if($vanus < 18){
+    echo "liiga noor";
+    print '<a href="sõjavägiVorm.php"> proovi uuesti</a> <br>';
+}else if($haridus = "N"){
+    echo "algharidusega ei saa";
     print '<a href="sõjavägiVorm.php"> proovi uuesti</a> <br>';
 }
 // if(strLen($age) > 0)
