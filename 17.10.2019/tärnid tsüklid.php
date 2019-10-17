@@ -2,6 +2,6 @@
 
 
 
-for($nr=1;$nr<=10;$nr++){
-    echo "*".'<br>';
+for($nr=1;$nr<=20;$nr++){
+    echo "*"." rida: ".$nr.'<br>';
 }
