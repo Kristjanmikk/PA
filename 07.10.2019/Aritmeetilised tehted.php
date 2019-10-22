@@ -36,7 +36,7 @@ $liitmine = $x + $y;
 $lahutamine = $x - $y;
 $korrutamine = $x * $y;
 $jagamine = $x / $y;
-$jaak = $x % $y;
+$jaak = $x % $y;<
 
 echo"
     <table>
