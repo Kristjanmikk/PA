@@ -11,10 +11,12 @@ function primenumber($number){
             }
         }
         if ($number == $jagaja) {
-            echo $number . " on algarv " . "<br>";
+
+            $result = $number . " on algarv " . "<br>";
         } else {
-            echo $number . "ei ole algarv " . "<br>";
+            $result = $number . " ei ole algarv " . "<br>";
         }
+        return $result;
 
 }
-primenumber(rand(0, 1000));
+echo primenumber(rand(0, 1000));
