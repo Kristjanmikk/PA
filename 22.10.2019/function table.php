@@ -10,18 +10,17 @@
             border: 1px #333 solid; border-collapse: collapse; text-align: center;
         }
         th, td {
-            width: 50px;
+            width: 40px;
             padding: 5px;
         }
     </style>
-    <title>Table</title>
+    <title>numbritega tabel</title>
 </head>
 <body>
 
 <?php
 
-// additional challenge:
-// header text value output must be realized by for loop
+
 function tableHeader($val1, $val2, $val3, $val4) {
     echo '<table border="1">';
     echo '<thead>';
@@ -33,10 +32,7 @@ function tableHeader($val1, $val2, $val3, $val4) {
     echo '</thead>';
     echo '</table>';
 }
-// define function tableBody
-// function use 2 parameters - table row and column number
-// function output is the table body
-// for data use the random numbers
+
 function tableBody($rowNumber, $colNumber){
     echo '<tbody>';
     for($row = 1; $row <= $rowNumber; $row++){
@@ -50,9 +46,7 @@ function tableBody($rowNumber, $colNumber){
     }
     echo '</tbody>';
 }
-// define function table
-// function use 2 parameters - table row and column number
-// function output is the table
+
 function table($rowNumber, $colNumber) {
     echo '<table>';
     tableHeader('see', 'on', 'tabeli', 'päis');
