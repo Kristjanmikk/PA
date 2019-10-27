@@ -1,0 +1,10 @@
+WHILE TSÜKKEL
+$arv = 1;
+while($arv <=10){
+    echo $arv.'<br>';
+    $arv++;
+}
+FOR TSÜKKEL
+for($nr=1;$nr<=10;$nr++){
+    echo $nr.'<br>';
+}
