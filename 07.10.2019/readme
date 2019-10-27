@@ -1,0 +1,7 @@
+$x = 8;
+$y = 2;
+$liitmine = $x + $y;
+$lahutamine = $x - $y;
+$korrutamine = $x * $y;
+$jagamine = $x / $y;
+$jaak = $x % $y;<
