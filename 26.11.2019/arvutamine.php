@@ -25,9 +25,14 @@ function SilindriRuumala($SilindriPõhjaRaadius, $SilindriKõrgus){
 $ruumala3 =  $põhjapindala * $SilindriKõrgus;
     return $ruumala3;
 }
-if(count($GET) != 0) {
+
 $keraruumala = KeraRuumala($keraRaadius);
 echo 'Keraruumala on :'.$keraruumala;
+echo'<br>';
+$koonuseruumala = Koonuseruumala($KoonusePõhjaRaadius, $KoonuseKõrgus);
+echo 'Koonuseruumala on :'.$koonuseruumala;
+echo'<br>';
+$Silindriruumala = SilindriRuumala($SilindriPõhjaRaadius, $SilindriKõrgus);
+echo 'Silindriruumala on :'.$Silindriruumala;
 
-$koonuseruumala =
-}
+
