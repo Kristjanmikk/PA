@@ -1,0 +1,34 @@
+$c = 10;
+    if($c <= -30){
+        echo '<body style="background-color:darkblue">';
+        echo $c." kraadi";
+    }
+    if($c>-30 and $c < 0){
+        echo '<body style="background-color:lightblue">';
+        echo $c." kraadi";
+    }else if($c >= 0 and $c < 10){
+        echo '<body style="background-color:lightgreen">';
+        echo $c." kraadi";
+    }else if($c >= 10 and $c < 30){
+        echo '<body style="background-color:lightyellow">';
+        echo $c." kraadi";
+    }else{
+        echo '<body style="background-color:orange">';
+        echo $c." kraadi";
+    }
+
+tsüklid
+$nb1 = $_GET["number1"];
+$nb2 = $_GET["number2"];
+$jagamine = $nb1/$nb2;
+if(empty($nb1) and empty($nb2)) {
+    echo "väljad on tühjad";
+    print '<a href="0 jagamine.php"> Palun ära jäta lahtreid tühjaks</a> <br>';
+}
+else if($nb2 == 0){
+    echo"second number cant equal 0";
+    print '<a href="0 jagamine.php"> sisesta andmed uuesti</a> <br>';
+}else if($nb2 > 0 or $nb2 < 0){
+    print $nb1."/".$nb2."=".$jagamine."<br>";
+    print '<a href="0 jagamine.php"> proovi uute arvudega</a> <br>';
+}
