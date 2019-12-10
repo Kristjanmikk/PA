@@ -20,3 +20,16 @@ function query($sql, $link){
     }
     return $result;
 }
+
+function getData($sql, $link){
+    $result = query($sql, $link);
+    $data = array();
+    // nii kaua kui andme ridu on nii kaua loeme ja salvestame neid et edaspidi kasutada
+    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+        $data[] = $row;
+    }
+    if(count($data) == 0){
+        return false;
+    }
+    return $data;
+}
