@@ -18,6 +18,8 @@ function pageMenu($menuData)
 }
 }
 
-function control($info){
-    if(strlen($info))
+function control($pageName, $info){
+    if(strlen($pageName)) > 0 and array_search($info, $menuData)){
+
+    }
 }
