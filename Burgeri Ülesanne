@@ -1,0 +1,121 @@
+<?php
+
+//burgeri klass
+class Burger{
+	
+	//burgeri omadused
+    public $nimetus = 'Juustu Burger';
+    public $liha = 'Veiseliha';
+    public $sai = 'Valge sai';
+    public $hind = 0.90;
+    public $lisand1 = 'Kapsas';
+    public $lisand1Hind = 0.30;
+    public $lisand2 = 'Sibul';
+    public $lisand2Hind = 0.20;
+    public $lisand3 = 'Tomat';
+    public $lisand3Hind = 0.40;
+    public $lisand4 = 'Värske kurk';
+    public $lisand4Hind = 0.15;
+
+        //tava burgeri hind
+		public function BurgeriHind(){
+			return
+				$this -> hind + $this -> lisand1Hind + $this -> lisand2Hind + $this -> lisand3Hind + $this -> lisand4Hind ;
+
+		}
+        //tava burgeri tellimus
+		public function BurgeriTellimus(){
+
+			return  'Teie tellimus '.     $this -> nimetus.
+					'<br> liha: ' .       $this -> liha.
+					'<br> sai: ' .        $this -> sai.
+					'<br> lisand 1: ' .    $this -> lisand1.
+					'<br> lisand 2: ' .    $this -> lisand2.
+					'<br> lisand 3: ' .    $this -> lisand3.
+					'<br> lisand 4: ' .    $this -> lisand4
+				;
+		}
+}
+//tervislik burger, burgeri subclass
+class TervislikBurger extends Burger{
+    //tervisliku burgeri omadused
+    public $nimetus1 = 'Tervise Burx';
+    public $sai = 'Tera leib';
+    public $tervislikLisand1 = 'mozzarella';
+    public $tervislikLisand1Hind = 0.65;
+    public $tervislikLisand2 = 'seened';
+    public $tervislikLisand2Hind = 1;
+    public $hind2 = 1.20;
+    //tervisliku burgeri hind
+    public function TervislikuBurgeriHind(){
+        return
+            $this -> hind2 + $this -> lisand1Hind + $this -> lisand2Hind + $this -> lisand3Hind + $this -> lisand4Hind + $this -> tervislikLisand1Hind + $this -> tervislikLisand2Hind;
+
+    }
+    //tervisliku burgeri tellimus
+    public function TervislikuBurgeriTellimus(){
+
+        return  'Teie tellimus '.     $this -> nimetus1.
+                '<br> liha: ' .       $this -> liha.
+                '<br> sai: ' .        $this -> sai.
+                '<br> lisand 1: ' .    $this -> lisand1.
+                '<br> lisand 2: ' .    $this -> lisand2.
+                '<br> lisand 3: ' .    $this -> lisand3.
+                '<br> lisand 4: ' .    $this -> lisand4.
+                '<br> tervislik lisand 1: ' . $this -> tervislikLisand1.
+                '<br> tervislik lisand 2: ' . $this -> tervislikLisand2
+            ;
+    }
+
+}
+//lux burger, burgeri subclass
+class LuxBurger extends burger{
+    public $nimetus2 = 'Lux Burx';
+    public $jook = 'coca-cola';
+    public $jookHind = 0.80;
+    public $kartulHind = 0.50;
+    public $kartulid = 'frii-kartulid';
+    public $hind3 = 3;
+    
+    public function LuxBurgeriHind(){
+        return
+    $this -> hind3 +  $this -> lisand2Hind + $this -> lisand3Hind + $this -> lisand4Hind + $this -> tervislikLisand1Hind + $this -> jookHind + $this -> kartulHind;
+    }
+
+    public function LuxBurgeriTellimus(){
+
+        return  'Teie tellimus '.     $this -> nimetus2.
+                '<br> liha: ' .       $this -> liha.
+                '<br> sai: ' .        $this -> sai.
+                '<br> lisand 2: ' .    $this -> lisand2.
+                '<br> lisand 3: ' .    $this -> lisand3.
+                '<br> lisand 4: ' .    $this -> lisand4.
+                '<br> tervislik lisand 1: ' . $this -> tervislikLisand1.
+                '<br> jook: ' . $this -> jook.
+                '<br> kartulid: ' . $this -> kartulid
+            ;
+    }
+}
+
+$TavaBurger = new Burger();
+echo '<h1>Tava burger</h1>';
+echo $TavaBurger -> BurgeriTellimus();
+echo '<br>';
+echo '<br> hind:'.$TavaBurger -> BurgeriHind().'£<br>';
+
+
+$TervislikBurger = new TervislikBurger();
+echo '<h1>Tervislik Burger</h1>';
+echo $TervislikBurger -> TervislikuBurgeriTellimus();
+echo '<br>';
+echo '<br> hind:'.$TervislikBurger -> TervislikuBurgeriHind().'£';
+
+
+$LuxBurger = new LuxBurger();
+echo '<h1>Lux Burger</h1>';
+echo $LuxBurger -> LuxBurgeriTellimus();
+echo '<br>';
+echo '<br> hind:'.$LuxBurger -> LuxBurgeriHind().'£';
+
+
+
